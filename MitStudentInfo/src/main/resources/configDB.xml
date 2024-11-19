@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="database.connection.ConnectionProvider" name="Connection" init-method="initConnection" destroy-method="destroy">
+        <constructor-arg value="jdbc:mysql://localhost:3306/mit_student_db" type="String" />
+        <constructor-arg value="root" type="String" />
+        <constructor-arg value="Rupam@mysql9301" type="String" />
+    </bean>
+
+    <bean class="database.connection.RegisterNewStudent" name="student">
+        <property name="con">
+            <ref bean="Connection" />
+        </property>
+    </bean>
+
+    <bean class="database.connection.FetchStudentDetails" name="fstudent">
+        <property name="con">
+            <ref bean="Connection" />
+        </property>
+    </bean>
+</beans>

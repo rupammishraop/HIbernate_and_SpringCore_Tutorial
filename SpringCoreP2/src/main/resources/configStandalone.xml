@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+<!--    Standalone List-->
+
+    <util:list list-class="java.util.LinkedList" id="friends">
+        <value> Rupam Mishra </value>
+        <value> Rishabh Mishra </value>
+        <value> Honey </value>
+        <value> Sajid </value>
+    </util:list>
+
+<!--    Standalone Map-->
+
+    <util:map map-class="java.util.HashMap" id="map">
+        <entry key="Sprite" value="30"/>
+        <entry key="Cola" value="40"/>
+        <entry key="Sting" value="50"/>
+    </util:map>
+
+<!--    Standalone Properties-->
+
+    <util:properties id="prop">
+        <prop key="Rupam"> 10 </prop>
+        <prop key="Rishabh"> 20 </prop>
+        <prop key="Honey">50</prop>
+    </util:properties>
+
+
+    <bean class="com.springcore.standalone.Person" name="person">
+        <property name="friends" ref="friends" />
+        <property name="map" ref="map"/>
+        <property name="prop" ref="prop"/>
+    </bean>
+
+</beans>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="org.example.PropertiesBean" name="prop1" >
+        <property name="prop">
+            <props>
+                <prop key="url">"jdbc:mysql://localhost:3306/jdbc"</prop>
+                <prop key="username">"root"</prop>
+                <prop key="password">"Rupam@mysql9301"</prop>
+                <prop key="number">9301858940</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>

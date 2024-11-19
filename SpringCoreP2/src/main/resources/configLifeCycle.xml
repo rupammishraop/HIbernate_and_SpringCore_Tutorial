@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+
+        <context:annotation-config />
+
+
+<!--    <bean class="com.springcore.lifecycle.Bottle" name="b1" init-method="start" destroy-method="bye">-->
+<!--        <property name="bottleName" value="Sprite" />-->
+<!--        <property name="bottlePrice" value="45.4" />-->
+<!--    </bean>-->
+
+<!--    <bean class="com.springcore.lifecycle.Samosha" name="s1">-->
+<!--            <property name="price" value="10" />-->
+<!--    </bean>-->
+
+        <bean class="com.springcore.lifecycle.LifeCycleByAnnotation" name="ex1">
+            <property name="name" value="Java" />
+        </bean>
+
+</beans>

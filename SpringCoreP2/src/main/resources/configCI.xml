@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <bean class="constructor.setter.Person" name="person1">
+       <constructor-arg value="101" type="int"/>
+       <constructor-arg value="Rupam Mishra" />
+       <constructor-arg>
+           <list>
+               <value>"C++"</value>
+               <value>"Java"</value>
+               <value>"JavaScript"</value>
+           </list>
+       </constructor-arg>
+   </bean>
+
+<!--   <bean class="constructor.setter.Person" name="person2">-->
+
+<!--   </bean>-->
+</beans>
